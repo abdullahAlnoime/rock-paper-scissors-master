@@ -1,0 +1,378 @@
+@font-face {
+  font-family: "BSC-B";
+  src: url("../font/BarlowSemiCondensed-Bold.ttf");
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "BSC-B";
+  text-transform: uppercase;
+}
+
+body {
+  background-image: radial-gradient(circle, hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  margin: 0;
+}
+
+.head {
+  width: 90%;
+  height: 90px;
+  margin: 10px auto;
+  padding: 10px;
+  border-radius: 4px;
+  border: 2px solid hsl(217, 16%, 45%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.head img {
+  width: 30%;
+}
+
+.head div {
+  width: 25%;
+  height: 100%;
+  padding: 10px 5px;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.head div span:first-of-type {
+  text-transform: uppercase;
+  text-align: center;
+  color: hsl(229, 64%, 46%);
+  font-size: 12px;
+}
+
+.head div span:last-of-type {
+  font-size: 35px;
+  text-align: center;
+  color: hsl(229, 25%, 31%);
+}
+
+@media (min-width: 375px) {
+  .desktop {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .head {
+    margin: 35px auto;
+    height: 120px;
+  }
+
+  .head img {
+    width: 25%;
+  }
+
+  .head div span:first-of-type {
+    font-size: 20px;
+  }
+
+  .head div span:last-of-type {
+    font-size: 45px;
+  }
+}
+
+.container,
+.when-choice {
+  width: 90%;
+  height: 260px;
+  margin: 30px auto 10px;
+  background-image: url("../images/bg-triangle.svg");
+  background-size: 60%;
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-position-y: 73%;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.container.stepTwo {
+  display: none;
+}
+
+.when-choice {
+  background-image: none;
+  display: none;
+  justify-content: space-around;
+}
+
+.when-choice.stepTwo {
+  display: flex;
+}
+
+.container .paper,
+.when-choice .paper,
+.container .scissors,
+.when-choice .scissors,
+.container .rock,
+.when-choice .rock {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.when-choice .paper.res,
+.when-choice .scissors.res,
+.when-choice .rock.res {
+  box-shadow: 0 0 0 5px hsl(217, 16%, 45%, 0.8), 0 0 0 20px hsl(217, 16%, 45%, 0.4), 0 0 0 25px hsl(217, 16%, 45%, 0.2) !important;
+}
+
+.container .paper div,
+.when-choice .paper div,
+.container .scissors div,
+.when-choice .scissors div,
+.container .rock div,
+.when-choice .rock div {
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: #FFF;
+  box-shadow: 0 5px 0 0 #DDD inset;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container div img,
+.when-choice div img {
+  width: 45px;
+  height: 45px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container .paper,
+.when-choice .paper {
+  background-image: linear-gradient(135deg, hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  box-shadow: 0 -5px 0 0 hsl(230, 89%, 54%) inset;
+}
+
+.container .scissors,
+.when-choice .scissors {
+  background-image: linear-gradient(135deg, hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  box-shadow: 0 -5px 0 0 hsl(39, 89%, 39%) inset;
+}
+
+.container .rock,
+.when-choice .rock {
+  background-image: linear-gradient(135deg, hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  box-shadow: 0 -5px 0 0 hsl(349, 71%, 42%) inset;
+}
+
+.when-choice .sp {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background-color: hsl(217, 16%, 45%);
+}
+
+.when-choice .par {
+  width: 100%;
+  height: fit-content;
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.when-choice .par p {
+  color: white;
+  margin: 0;
+  width: fit-content;
+}
+
+.when-choice .par p:first-of-type {
+  margin-left: 11.5%;
+}
+
+.when-choice .par p:last-of-type {
+  margin-right: 2%;
+}
+
+@media (min-width: 375px) {
+
+  .container,
+  .when-choice {
+    width: 68%;
+    height: 322px;
+    background-position-y: 90%;
+  }
+
+  .container .paper,
+  .when-choice .paper,
+  .container .scissors,
+  .when-choice .scissors,
+  .container .rock,
+  .when-choice .rock,
+  .when-choice .sp {
+    width: 160px;
+    height: 160px;
+  }
+
+  .container .paper div,
+  .when-choice .paper div,
+  .container .scissors div,
+  .when-choice .scissors div,
+  .container .rock div,
+  .when-choice .rock div {
+    width: 115px;
+    height: 115px;
+  }
+
+  .container div img,
+  .when-choice div img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .when-choice .par {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+    bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .when-choice .par p {
+    color: white;
+    margin: 0;
+    width: fit-content;
+  }
+
+  .when-choice .par p:first-of-type {
+    margin-left: 16%;
+  }
+
+  .when-choice .par p:last-of-type {
+    margin-right: 9.5%;
+  }
+}
+
+button {
+  width: 30%;
+  margin: 50px 35% 30px;
+  padding: 10px 15px;
+  color: white;
+  background-color: transparent;
+  border: 1px solid white;
+  border-radius: 4px;
+  transition: 0.7s;
+}
+
+button:hover {
+  background-color: white;
+  color: #24252d;
+}
+
+.result {
+  visibility: hidden;
+  margin: 10px 0;
+  height: 120px;
+}
+
+.result h1 {
+  color: white;
+  margin: 10px auto;
+  text-align: center;
+}
+
+.result button {
+  width: 50%;
+  padding: 15px 20px;
+  margin: 10px 25%;
+  background-color: white;
+  color: #24242d;
+}
+
+.result button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+
+.result.final {
+  visibility: visible;
+}
+
+.rules {
+  width: 90%;
+  margin: 10px 5%;
+  display: none;
+  border-radius: 4px;
+  flex-direction: column;
+  background-color: white;
+  justify-content: space-evenly;
+  position: absolute;
+  z-index: 500;
+  top: 100px;
+}
+
+.rules.show {
+  display: flex;
+}
+
+.rules h2 {
+  text-align: center;
+  margin: 20px 0 40px;
+}
+
+.rules img {
+  width: 90%;
+  margin: 40px auto;
+}
+
+@media (min-width: 375px) {
+  .desktop {
+    position: relative;
+  }
+
+  .desktop>button {
+    width: 10%;
+    margin: 30px 0 30px 100%;
+  }
+
+  .rules {
+    width: 60%;
+    margin: 40px 20%;
+    border-radius: 20px;
+  }
+
+  .rules h2,
+  .rules img {
+    margin: 20px auto;
+  }
+
+  .result {
+    position: relative;
+    bottom: 45px;
+  }
+
+  .result button {
+    width: 30%;
+    margin: 10px 35%;
+  }
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: white;
+}
+
+.attribution a {
+  color: white;
+}
